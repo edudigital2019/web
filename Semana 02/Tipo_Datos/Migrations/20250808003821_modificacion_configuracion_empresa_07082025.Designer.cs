@@ -12,8 +12,8 @@ using Tipo_Datos.Data;
 namespace Tipo_Datos.Migrations
 {
     [DbContext(typeof(DatosDbContext))]
-    [Migration("20250810230852_Inicial")]
-    partial class Inicial
+    [Migration("20250808003821_modificacion_configuracion_empresa_07082025")]
+    partial class modificacion_configuracion_empresa_07082025
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

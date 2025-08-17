@@ -17,57 +17,137 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Tipo_Datos
 build_property.RootNamespace = Tipo_Datos
-build_property.ProjectDir = E:\UNIANDES\AplicacionesWeb\web\Semana 02\Tipo_Datos\
+build_property.ProjectDir = E:\UNIANDES\AplicacionesWeb\Profesor\web\Semana 02\Tipo_Datos\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\UNIANDES\AplicacionesWeb\web\Semana 02\Tipo_Datos
+build_property.MSBuildProjectDirectory = E:\UNIANDES\AplicacionesWeb\Profesor\web\Semana 02\Tipo_Datos
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[E:/UNIANDES/AplicacionesWeb/web/Semana 02/Tipo_Datos/Views/Clientes/Editar.cshtml]
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Clientes/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/UNIANDES/AplicacionesWeb/web/Semana 02/Tipo_Datos/Views/Clientes/Eliminar.cshtml]
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Clientes/Eliminar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWxpbWluYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/UNIANDES/AplicacionesWeb/web/Semana 02/Tipo_Datos/Views/Clientes/Index.cshtml]
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Clientes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/UNIANDES/AplicacionesWeb/web/Semana 02/Tipo_Datos/Views/Clientes/Nuevo.cshtml]
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Clientes/Nuevo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcTnVldm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/UNIANDES/AplicacionesWeb/web/Semana 02/Tipo_Datos/Views/Home/Index.cshtml]
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Configuraciones/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhY2lvbmVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Configuraciones/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhY2lvbmVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Configuraciones/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhY2lvbmVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Configuraciones/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhY2lvbmVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Configuraciones/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhY2lvbmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/UNIANDES/AplicacionesWeb/web/Semana 02/Tipo_Datos/Views/Home/Privacy.cshtml]
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/UNIANDES/AplicacionesWeb/web/Semana 02/Tipo_Datos/Views/Shared/Error.cshtml]
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Productos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Productos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Productos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Productos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Productos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/UNIANDES/AplicacionesWeb/web/Semana 02/Tipo_Datos/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/UNIANDES/AplicacionesWeb/web/Semana 02/Tipo_Datos/Views/_ViewImports.cshtml]
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Usuarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Usuarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Usuarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Usuarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Usuarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Ventas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Ventas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Ventas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Ventas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Ventas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/UNIANDES/AplicacionesWeb/web/Semana 02/Tipo_Datos/Views/_ViewStart.cshtml]
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/UNIANDES/AplicacionesWeb/web/Semana 02/Tipo_Datos/Views/Shared/_Layout.cshtml]
+[E:/UNIANDES/AplicacionesWeb/Profesor/web/Semana 02/Tipo_Datos/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7fyx2srjo1

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\UNIANDES\\AplicacionesWeb\\web\\Semana 02\\Tipo_Datos\\Tipo_Datos.csproj": {}
+    "E:\\UNIANDES\\AplicacionesWeb\\Profesor\\web\\Semana 02\\Tipo_Datos\\Tipo_Datos.csproj": {}
   },
   "projects": {
-    "E:\\UNIANDES\\AplicacionesWeb\\web\\Semana 02\\Tipo_Datos\\Tipo_Datos.csproj": {
+    "E:\\UNIANDES\\AplicacionesWeb\\Profesor\\web\\Semana 02\\Tipo_Datos\\Tipo_Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\UNIANDES\\AplicacionesWeb\\web\\Semana 02\\Tipo_Datos\\Tipo_Datos.csproj",
+        "projectUniqueName": "E:\\UNIANDES\\AplicacionesWeb\\Profesor\\web\\Semana 02\\Tipo_Datos\\Tipo_Datos.csproj",
         "projectName": "Tipo_Datos",
-        "projectPath": "E:\\UNIANDES\\AplicacionesWeb\\web\\Semana 02\\Tipo_Datos\\Tipo_Datos.csproj",
+        "projectPath": "E:\\UNIANDES\\AplicacionesWeb\\Profesor\\web\\Semana 02\\Tipo_Datos\\Tipo_Datos.csproj",
         "packagesPath": "C:\\Users\\Edudigital\\.nuget\\packages\\",
-        "outputPath": "E:\\UNIANDES\\AplicacionesWeb\\web\\Semana 02\\Tipo_Datos\\obj\\",
+        "outputPath": "E:\\UNIANDES\\AplicacionesWeb\\Profesor\\web\\Semana 02\\Tipo_Datos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

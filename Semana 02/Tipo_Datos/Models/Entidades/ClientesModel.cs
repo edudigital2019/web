@@ -7,16 +7,16 @@
     [Table("Clientes")]
     public class ClientesModel:BaseModel
     {
-        [Required(ErrorMessage ="Campo Requerido")]
-        public string Nombres { get; set; }
-        [Required(ErrorMessage = "Campo Requerido")]
+        [Required(ErrorMessage ="Cammpo Requerido")]
+        public string Nombres { get; set; } 
+        [Required(ErrorMessage = "Cammpo Requerido")]
         [EmailAddress]
-        public string Email { get; set; }
-        [Required(ErrorMessage = "Campo Requerido")]
+        public string Email { get; set; } 
+        [Required(ErrorMessage = "Cammpo Requerido")]
         public string Telefono { get; set; }
-        [Required(ErrorMessage = "Campo Requerido")]
+        [Required(ErrorMessage = "Cammpo Requerido")]
         public string Direccion { get; set; }
-        [Required(ErrorMessage = "Campo Requerido")]
+        [Required(ErrorMessage = "Cammpo Requerido")]
         public string Cedula_RUC { get; set; }
 
     }
