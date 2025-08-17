@@ -3,7 +3,7 @@
 const btnGuardar = document.querySelector('input[value="Guardar"]') || document.querySelector('input[value="Eliminar"]')
 let formResult = document.querySelector('.form-result') // PAra mmostrar resultados de la accion
 
-if (btnGuardar) // para agregar evento si existe boton
+if (btnGuardar) 
 btnGuardar.addEventListener('click', (e) => {
     e.preventDefault()
 
@@ -14,7 +14,7 @@ btnGuardar.addEventListener('click', (e) => {
     let url =`/api/ClientesApi/`
     let rt = frm.action.split('/')
 
-    // manejar parametros de metodo y ruta 
+    
     if (rt.includes('Nuevo')) {
         mth = 'post'
         url=`/api/ClientesApi/Nuevo`
@@ -31,15 +31,15 @@ btnGuardar.addEventListener('click', (e) => {
         url = `/api/ClientesApi/${clienteid.value}`
     }
 
-    //paRa convertir dinamicamente datos del formulario a formato JSON
+    
     formData.forEach((value, key) => object[key] = value);
-    //para manejar ckeckbnox
+    
     if (document.querySelector('#isDelete'))
         object['isDelete'] = document.querySelector('#isDelete').checked;
-    //para manejar contenedor de respuesta
+   
     if (formResult) formResult.innerHTML = ''; else formResult = frm;
     
-    // para enviar peticion a la api
+   
     fetch(url, {
         method: mth,
         headers: {
@@ -52,9 +52,9 @@ btnGuardar.addEventListener('click', (e) => {
         }
         return uncliente.text();
     }).then(datos => {
-        //console.log(datos)
+        
         if (datos) {
-            //manejar errores:vista formulario y consola
+            
             if (datos.errors && Object.keys(datos.errors).length > 0) {
                 formResult.className = `form-result error`
                 formResult.innerHTML = `<span style="color:red">${datos.title}:</span>`
@@ -65,7 +65,7 @@ btnGuardar.addEventListener('click', (e) => {
 
                 throw { ...datos };
             }
-            //manejar respuesta satisfactoria
+          
             alert('Registro afectado exitosamente')
             e.target.disabled = true
 
