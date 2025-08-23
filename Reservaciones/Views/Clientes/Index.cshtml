@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Reservaciones.Models.Entidades.ClientesModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Lista de Clientes</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary"> Crear Cliente</a>
+</p>
+<table class="table table-responsive table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+               @item.ClienteId
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                <a asp-action="Edit" class="btn btn-outline-success" asp-route-id="@item.ClienteId">Editar</a>
+                <a asp-action="Details" class="btn btn-outline-success" asp-route-id="@item.ClienteId">Datos Cliente</a>
+                <a asp-action="Delete" class="btn btn-outline-danger"  asp-route-id="@item.ClienteId">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

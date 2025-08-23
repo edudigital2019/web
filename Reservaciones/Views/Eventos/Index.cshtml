@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Reservaciones.Models.Entidades.EventosModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Eventos</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary"> Crear Evento</a>
+</p>
+<table class="table table-responsive table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ubicacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+               @item.EventoId
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ubicacion)
+            </td>
+            <td>
+               <a asp-action="Edit" class="btn btn-outline-success" asp-route-id="@item.EventoId">Editar</a>
+               <a asp-action="Details" class="btn btn-outline-success" asp-route-id="@item.EventoId">Información Evento</a>
+               <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.EventoId">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
