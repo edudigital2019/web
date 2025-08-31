@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Calificaciones.Models.CursosModels>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="text-center mb-4">
+    <h1 class="display-4 fw-bold">Cursos</h1>
+</div>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">+ Crear Nuevo</a>
+</p>
+<table class="table" table-responsive table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Creditos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Activo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profesor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Creditos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Activo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Profesor.Apellidos)
+            </td>
+                <td>
+                    <a asp-action="Edit" class="btn btn-outline-success" asp-route-id="@item.Id">Editar</a>
+                    <a asp-action="Details" class="btn btn-outline-success" asp-route-id="@item.Id">Detalles</a>
+                    <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.Id">Eliminar</a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>
