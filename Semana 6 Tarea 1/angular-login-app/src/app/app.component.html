@@ -1,0 +1,23 @@
+<header class="header">
+  <nav class="nav">
+    <!-- Logo -->
+    <a routerLink="/" class="nav__logo">Aplicaciones Web</a>
+
+
+    <div class="nav__spacer"></div>
+
+    <ng-container *ngIf="obtenerNombreUsuario(); ">
+      <div class="nav__user">
+        <span class="nav__username">{{ obtenerNombreUsuario() }}</span>
+        <button class="nav__btn" (click)="salir()">Salir</button>
+      </div>
+    </ng-container>
+
+    <!-- Usuario no logueado -->
+    
+  </nav>
+</header>
+
+<main class="main">
+  <router-outlet></router-outlet>
+</main>

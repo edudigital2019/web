@@ -1,0 +1,25 @@
+<section class="contenedor-login">
+  <h2>Iniciar sesión</h2>
+  <form [formGroup]="formularioLogin" (ngSubmit)="enviarLogin()" novalidate>
+    <div class="campo">
+      <label for="email">Correo electrónico</label>
+      <input id="email" type="email" formControlName="email" placeholder="tucorreo@dominio.com" />
+      <small class="error" *ngIf="formularioLogin.controls.email.invalid && formularioLogin.controls.email.touched">Correo inválido</small>
+    </div>
+
+    <div class="campo">
+      <label for="contrasenia">Contraseña</label>
+      <div class="fila">
+        <input [type]="mostrandoContrasenia ? 'text' : 'password'" id="contrasenia" formControlName="contrasenia" placeholder="••••••" />
+        <button type="button" class="boton-secundario" (click)="alternarVisibilidadContrasenia()">
+          {{ mostrandoContrasenia ? 'Ocultar' : 'Mostrar' }}
+        </button>
+      </div>
+      <small class="error" *ngIf="formularioLogin.controls.contrasenia.invalid && formularioLogin.controls.contrasenia.touched">Mínimo 4 caracteres</small>
+    </div>
+
+    <button class="boton-primario" type="submit" [disabled]="formularioLogin.invalid">Entrar</button>
+
+    <p class="error" *ngIf="mensajeError">{{ mensajeError }}</p>
+  </form>
+</section>

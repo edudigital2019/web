@@ -1,0 +1,7 @@
+.encabezado { background: #0a3b5c; color: #fff; padding: 0.5rem 1rem; }
+.barra-navegacion { display: flex; align-items: center; gap: 1rem; }
+.logo { color: #fff; text-decoration: none; font-weight: 700; }
+.espaciador { flex: 1; }
+.usuario { margin-right: 1rem; }
+.boton { background: #ffffff22; color: #fff; border: 1px solid #ffffff55; padding: 0.4rem 0.8rem; cursor: pointer; }
+.contenido-principal { padding: 1rem; }
