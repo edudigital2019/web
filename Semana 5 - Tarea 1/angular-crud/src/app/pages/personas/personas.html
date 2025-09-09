@@ -1,0 +1,47 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="fw-bold text-primary">
+      <i class="bi bi-people-fill"></i> Información de Personas
+    </h2>
+    <button type="button" class="btn btn-success" [routerLink]="['/personas/crear']">
+      <i class="bi bi-person-plus-fill"></i> Crear Persona
+    </button>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-hover table-bordered align-middle shadow-sm">
+      <thead class="table-dark">
+        <tr class="text-center">
+          <th>#</th>
+          <th>Nombres</th>
+          <th>CI / RUC</th>
+          <th>Correo</th>
+          <th>Teléfono</th>
+          <th>Dirección</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(persona of lista_personas$; track persona.id; let i = $index){
+        <tr>
+          <td class="text-center fw-bold">{{ i + 1 }}</td>
+          <td>{{ persona.nombres }}</td>
+          <td>{{ persona.cedula_ruc }}</td>
+          <td>{{ persona.email }}</td>
+          <td>{{ persona.telefono }}</td>
+          <td>{{ persona.direccion }}</td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-primary me-2"
+              [routerLink]="['/personas/editar', persona.id]">
+              <i class="bi bi-pencil-square"></i> Editar
+            </button>
+            <button class="btn btn-sm btn-danger" (click)="eliminarCliente(persona.id!)">
+              <i class="bi bi-trash-fill"></i> Eliminar
+            </button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

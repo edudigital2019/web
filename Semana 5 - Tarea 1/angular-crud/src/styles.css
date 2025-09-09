@@ -1,0 +1,292 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* ***************************************
+*****	VARIABLES GENERALES	******
+*****************************************/
+:root {
+	--pag-bg-color: #0d6efd;
+	--bg-secondary:#E6E6FA;
+	/* E0FFFF 98FB98*/
+	--elem-main-border-color:1px solid #000000;
+	--grid-fila-border-color:0 solid #000000;
+	--elem-main-border-radius:5pt;
+	--form-border-color:1px solid blue;
+	--form-header-background-color:#D3DCE3; /*#638cb5;*/
+	--boton-background-color:#638cb5;	
+	--border-secondary:1px solid #008080;
+	
+	--text-color-main: #ffffff;
+	--text-color-secondary: #ffffff;
+	
+	
+}
+/* ***************************************
+*****	ESTILOS GENERALES	******
+*****************************************/
+
+/* *************  BODY  FLEX BLOX ***************** */
+.content-wrap{
+	display: flex;
+	flex-wrap: wrap;
+}
+.pag__body{
+	background-color:#fff;
+	margin:0;
+	padding:0;
+	min-height: 100vh;
+	
+	/*display: flex;
+	flex-wrap: wrap;*/
+}
+.pag__header{
+	display:flex;
+	flex-flow: row wrap;
+	justify-content:space-between;
+}
+.pag__nav{
+	display: flex;
+	flex-wrap: wrap;	
+	align-content: center;
+}
+.pag__header,
+.pag__footer{
+	
+	background-color:var(--pag-bg-color);
+}
+.pag__header,
+.pag__main,
+.pag__nav,
+.pag__footer{
+	padding:.5em;
+}
+.pag__header .container-logo,.container-title{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;	
+}
+.container-title{
+	flex-direction:column;
+}
+.pag__logo-img{
+	border-radius:50%;
+}
+.pag__logo-title{
+	padding:0;
+	margin:0;
+	/*font: bold 2em/1.2 arial, helvetica, italic;
+	font-family: "Homer Simpson UI";*/	
+	font-weight: bold;
+	font-family: Helvetica, Arial, sans-serif;
+}
+.pag__logo-title,.pag__logo-subtitle{
+	color:var(--text-color-main);
+	text-align:center;
+}
+.pag__logo-subtitle{
+	margin:.2em;
+	font: oblique bold 80% cursive;
+}
+
+.content-wrap,.pag__footer{
+	width: 100%;
+}
+.pag__footer{
+	display: flex; flex-wrap: wrap; align-self: flex-end;	
+	justify-content:space-around;
+}
+.footer-section{
+	text-align:center;
+}
+.pag__main{
+	box-sizing: border-box;
+	display:flex;
+}
+.section-main{	
+	flex:1 1 70%;
+}
+.aside-right{	
+	flex:1 1 30%;
+	background-color:var(--pag-bg-color);
+}
+.section-right{
+	display: flex;   
+	justify-content: center;
+	flex-direction:column;
+
+	margin: .2em 0;
+	padding:.3em;
+}
+.title-section-right{
+	margin:0.2em;
+	color:var(--text-color-secondary);
+}
+.container-comentar{	
+	
+	border:2px solid #fff;
+	
+}
+/* END PAGE*/
+
+/* *************  NAV ***************** */
+.nav{
+	display: flex;
+	flex-wrap: wrap;
+}
+.nav ul, .nav li{
+	list-style:none;
+}
+.nav ul{	
+	margin:0;
+	padding:0;
+	
+	display:flex;
+	flex-wrap:wrap;
+}
+.nav li{
+	margin:.3em;
+	padding:.2em;
+	
+}
+.nav a{
+	text-decoration:none;
+	font-weight:bold;
+	padding:.2em;
+	color:var(--text-color-secondary);
+	/* background-color:#F8F9F9; */
+	border:1px solid #fff;
+	border-radius:.8em;
+	
+}
+.nav a.active{
+	background-color:#fff;
+	/* border-bottom:2px solid #8B0000; */
+}
+/* END nav*/
+
+/*FORMS AND ELEMENTS*/
+.form{
+	border-radius:.3em;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-group .error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.form-group .help-text {
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+/* Estilo base para todos los botones */
+.btn {
+  display: inline-block;
+  margin:.3em;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Botón primario: azul intenso */
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+/* Botón secundario: gris claro */
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #545b62;
+  box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.3);
+}
+
+.btn-success{
+	background-color: #007bff;
+}
+.btn-danger{
+	background-color:#ffc0cb;
+}
+
+/*TABLE*/
+.table {
+	border: 1px solid #ccc;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing:.2em;
+}
+.table caption {
+	font-weight: bold;
+	font-family:Vegur, 'PT Sans', Verdana, sans-serif;	
+	font-size:1em;
+	padding:.3em;
+}
+.table tr {
+	border: 1px solid #ddd;
+}
+.table tr:nth-child(even) {
+	background-color:#fbfcfc; 
+}
+.table tbody tr{
+	color:black;
+	font-size:.8em;	
+}
+.table tbody tr:hover{
+	background-color:#FFF8DC;
+}
+.table td, table th {
+	padding:.2em;
+	text-align: center;
+}
+.table th {
+	text-transform: uppercase;
+	font-family:Georgia, serif;
+	font-size:.9em;
+	letter-spacing: 1px;
+}
+

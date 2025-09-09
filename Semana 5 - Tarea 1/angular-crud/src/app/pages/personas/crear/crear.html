@@ -1,0 +1,44 @@
+<div class="container">
+  <form class="form" [formGroup]="personaform" (ngSubmit)="enviar()">
+
+    <div class="form-group">
+      <label for="nombres">Nombres</label>
+      <input formControlName="nombres" type="text" class="form-control" id="nombres" placeholder="Nombres">
+      <div class="invalid-feedback d-block" *ngIf="personaform.get('nombres')?.touched && personaform.get('nombres')?.invalid">
+        El nombre es requerido.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="cedula_ruc">Cédula/RUC</label>
+      <input formControlName="cedula_ruc" type="text" class="form-control" id="cedula_ruc" placeholder="Cédula o RUC">
+      <div class="invalid-feedback d-block" *ngIf="personaform.get('cedula_ruc')?.touched && personaform.get('cedula_ruc')?.invalid">
+        La cédula/RUC es requerida.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Correo</label>
+      <input formControlName="email" type="email" class="form-control" id="email" placeholder="correo@dominio.com">
+      <div class="invalid-feedback d-block" *ngIf="personaform.get('email')?.touched && personaform.get('email')?.invalid">
+        El correo no es válido.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="telefono">Teléfono</label>
+      <input formControlName="telefono" type="text" class="form-control" id="telefono" placeholder="Teléfono">
+      <div class="invalid-feedback d-block" *ngIf="personaform.get('telefono')?.touched && personaform.get('telefono')?.invalid">
+        El teléfono es requerido.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="direccion">Dirección</label>
+      <input formControlName="direccion" type="text" class="form-control" id="direccion" placeholder="Dirección">
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-success" [disabled]="personaform.invalid">Guardar</button>
+    <button class="btn btn-secondary" routerLink="/">Cancelar</button>
+  </form>
+</div>
