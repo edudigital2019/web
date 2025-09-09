@@ -4,3 +4,7 @@ bin/
 obj/
 *.user
 *.suo
+# Angular / Node.js
+node_modules/
+dist/
+.angular/
