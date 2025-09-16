@@ -1,0 +1,40 @@
+<div class="factura-container">
+  <h2>Generar Factura</h2>
+
+  <div class="toolbar">
+    <a routerLink="/facturas/nueva" class="btn">Nueva Factura</a>
+    <button type="button" class="btn" (click)="imprimir()">Generar PDF</button>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>COD</th>
+        <th>Cliente</th>
+        <th>Fecha Venta</th>
+        <th>Subtotal</th>
+        <th>Total</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (factura of lista_facturas(); track factura.id; let i = $index) {
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ factura.codigo_Venta }}</td>
+          <!-- Muestra nombre si viene el objeto; si no, el id -->
+          <td>{{ factura.clientesModel?.nombres || factura.clientesModelId }}</td>
+          <td>{{ factura.fechaVenta | date:'yyyy-MM-dd' }}</td>
+          <td>{{ factura.sub_Total_Venta | number:'1.2-2' }}</td>
+          <td>{{ factura.total_Venta | number:'1.2-2' }}</td>
+          <td class="acciones">
+            <a [routerLink]="['/facturas/editar', factura.id]" class="btn">Editar</a>
+            <button type="button" class="btn btn-danger" (click)="eliminar(factura.id)">Eliminar</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

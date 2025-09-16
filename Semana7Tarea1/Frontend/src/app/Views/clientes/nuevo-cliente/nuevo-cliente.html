@@ -1,0 +1,50 @@
+<h2>{{ titulo }}</h2>
+
+<form [formGroup]="form" (ngSubmit)="guardarCliente()" class="card">
+  <div class="grid">
+    <label>
+      Nombres
+      <input type="text" formControlName="nombres" />
+      <small *ngIf="form.controls.nombres.touched && form.controls.nombres.invalid">
+        Requerido (mín. 3 caracteres).
+      </small>
+    </label>
+
+    <label>
+      Email
+      <input type="email" formControlName="email" />
+      <small *ngIf="form.controls.email.touched && form.controls.email.invalid">
+        Email válido requerido.
+      </small>
+    </label>
+
+    <label>
+      Teléfono
+      <input type="text" formControlName="telefono" />
+      <small *ngIf="form.controls.telefono.touched && form.controls.telefono.invalid">
+        Requerido (mín. 7 dígitos).
+      </small>
+    </label>
+
+    <label>
+      Dirección
+      <input type="text" formControlName="direccion" />
+      <small *ngIf="form.controls.direccion.touched && form.controls.direccion.invalid">
+        Requerido (mín. 3 caracteres).
+      </small>
+    </label>
+
+    <label>
+      Cédula / RUC
+      <input type="text" formControlName="cedula_ruc" />
+      <small *ngIf="form.controls.cedula_ruc.touched && form.controls.cedula_ruc.invalid">
+        Requerido (mín. 10 caracteres).
+      </small>
+    </label>
+  </div>
+
+  <div class="actions">
+    <button type="submit">Guardar</button>
+    <a routerLink="/clientes" class="secondary">Cancelar</a>
+  </div>
+</form>

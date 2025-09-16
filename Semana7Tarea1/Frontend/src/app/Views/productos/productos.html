@@ -1,0 +1,36 @@
+<h2>Productos</h2>
+
+<div style="margin:.5rem 0;">
+  <!-- lo dejaremos preparado para cuando creemos el form -->
+  <a routerLink="/productos/nuevo" class="btn">Nuevo Producto</a>
+</div>
+
+<p *ngIf="!loading() && error()" class="error">{{ error() }}</p>
+
+<table *ngIf="!loading() && !error() && productos().length" class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Código Barras</th>
+      <th>Stock</th>
+      <th>Precio</th>
+      <th>Descripción</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of productos()">
+      <td>{{ p.id }}</td>
+      <td>{{ p.nombre }}</td>
+      <td>{{ p.codigo_Barras }}</td>
+      <td>{{ p.stock }}</td>
+      <td>{{ p.precio | number:'1.2-2' }}</td>
+      <td>{{ p.descripcion }}</td>
+      <td class="acciones">
+        <a [routerLink]="['/productos/editar', p.id]" class="btn">Editar</a>
+        <button class="btn btn-danger" (click)="eliminar(p.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

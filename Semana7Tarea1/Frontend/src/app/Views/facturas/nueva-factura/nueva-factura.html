@@ -1,0 +1,96 @@
+<h2>Nueva Factura</h2>
+
+<form [formGroup]="form" (ngSubmit)="guardar()" class="card">
+
+
+  <div class="grid">
+    <label>
+      Cliente
+      <select formControlName="clientesModelId">
+        <option [ngValue]="null">-- seleccione --</option>
+        <option *ngFor="let c of clientes()" [ngValue]="c.id">{{ c.nombres }}</option>
+      </select>
+    </label>
+
+    <label>
+      Código
+      <input type="text" formControlName="codigo_Venta"/>
+    </label>
+
+    <label>
+      Fecha
+      <input type="date" formControlName="fechaVenta"/>
+    </label>
+
+    <label>
+      Estado
+      <select formControlName="estado_Venta">
+        <option>Pendiente</option>
+        <option>Pagada</option>
+        <option>Anulada</option>
+      </select>
+    </label>
+
+    <label>
+      Método de pago
+      <select formControlName="metodo_Pago">
+        <option>Efectivo</option>
+        <option>Tarjeta</option>
+        <option>Transferencia</option>
+        <option>Cheque</option>
+        <option>Otro</option>
+      </select>
+    </label>
+
+    <label>
+      Descuento
+      <input type="number" formControlName="descuento" min="0" step="0.01"/>
+    </label>
+
+    <label class="full">
+      Notas
+      <textarea formControlName="notas" rows="2"></textarea>
+    </label>
+  </div>
+
+  <h3>Detalle</h3>
+  <table class="table" formArrayName="detalleFactura">
+    <thead>
+    <tr>
+      <th style="width:30%">Producto</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+      <th>Subtotal</th>
+      <th style="width:80px"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let linea of detalleFactura.controls; let i = index" [formGroupName]="i">
+      <td>
+        <select formControlName="productosModelId" (change)="onProductoChange(i)">
+          <option [ngValue]="null">-- seleccione --</option>
+          <option *ngFor="let p of productos()" [ngValue]="p.id">{{ p.nombre }}</option>
+        </select>
+      </td>
+      <td><input type="number" formControlName="precio" min="0" step="0.01" (input)="recalcLinea(i)"/></td>
+      <td><input type="number" formControlName="cantidad" min="1" step="1" (input)="recalcLinea(i)"/></td>
+      <td><input type="number" formControlName="monto" readonly/></td>
+      <td><button type="button" class="btn btn-danger" (click)="eliminarLinea(i)">✖</button></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="detalle-actions">
+    <button type="button" class="btn" (click)="agregarLinea()">➕ Añadir línea</button>
+  </div>
+
+   <div class="totales">
+    <div>Sub total: <strong>{{ form.value.sub_Total_Venta | number:'1.2-2' }}</strong></div>
+    <div>Total: <strong>{{ form.value.total_Venta | number:'1.2-2' }}</strong></div>
+  </div>
+
+  <div class="actions">
+    <button type="submit" class="btn">Guardar</button>
+    <a routerLink="/facturas" class="btn">Cancelar</a>
+  </div>
+</form>

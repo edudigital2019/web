@@ -1,0 +1,9 @@
+.btn { display:inline-block; padding:.4rem .7rem; border:1px solid #cbd5e1; border-radius:.5rem; background:#f8fafc; cursor:pointer; text-decoration:none; color:inherit; }
+.btn:hover { background:#eef2f7; }
+.btn-danger { background:#fee2e2; border-color:#fecaca; }
+.table { width:100%; border-collapse:collapse; }
+.table th, .table td { border-bottom:1px solid #e5e7eb; padding:.5rem; text-align:left; }
+.table thead th { background:#f1f5f9; }
+.error { color:#b91c1c; }
+.acciones .btn + .btn { margin-left:.5rem; }
+

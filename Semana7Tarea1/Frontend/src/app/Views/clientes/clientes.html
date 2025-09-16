@@ -1,0 +1,27 @@
+<h2>Clientes</h2>
+
+<div style="margin:.5rem 0;">
+  <a routerLink="/clientes/nuevo" class="btn">Nuevo Cliente</a>
+</div>
+
+<table *ngIf="!loading() && !error() && clientes().length" class="table">
+  <thead>
+    <tr>
+      <th>ID</th><th>Nombres</th><th>Email</th><th>Teléfono</th><th>Dirección</th><th>Cédula/RUC</th><th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of clientes()">
+      <td>{{ c.id }}</td>
+      <td>{{ c.nombres }}</td>
+      <td>{{ c.email }}</td>
+      <td>{{ c.telefono }}</td>
+      <td>{{ c.direccion }}</td>
+      <td>{{ c.cedula_ruc }}</td>
+       <td class="acciones">
+        <a [routerLink]="['/clientes/editar', c.id]">Editar</a>
+        <button type="button" (click)="eliminar(c.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

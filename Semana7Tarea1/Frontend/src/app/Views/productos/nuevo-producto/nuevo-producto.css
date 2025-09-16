@@ -1,0 +1,9 @@
+.card { padding:1rem; border:1px solid #e5e7eb; border-radius:.75rem; margin-bottom:1rem; }
+.grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:.75rem; }
+label { display:flex; flex-direction:column; font-size:.9rem; gap:.25rem; }
+label.full { grid-column: 1 / -1; }
+input, textarea { padding:.5rem; border:1px solid #cbd5e1; border-radius:.5rem; }
+small { color:#b91c1c; }
+.actions { display:flex; gap:.5rem; margin-top:.5rem; }
+.btn { display:inline-block; padding:.4rem .7rem; border:1px solid #cbd5e1; border-radius:.5rem; background:#f8fafc; text-decoration:none; color:inherit; cursor:pointer; }
+.btn:hover { background:#eef2f7; }
