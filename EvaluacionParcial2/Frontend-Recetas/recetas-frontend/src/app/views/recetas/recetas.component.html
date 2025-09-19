@@ -1,0 +1,60 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Lista de Recetas</h2>
+    <a routerLink="/recetas/nueva" class="btn btn-primary">Nueva Receta</a>
+  </div>
+
+  <div *ngIf="recetas?.length; else vacio">
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered align-middle">
+        <thead class="table-light">
+          <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th class="text-center">Tiempo (min)</th>
+            <th class="text-center">Dificultad</th>
+            <th>Ingredientes</th>
+            <th class="text-center">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let receta of recetas">
+            <td class="fw-semibold">{{ receta.nombre }}</td>
+            <td>{{ receta.descripcion }}</td>
+            <td class="text-center">{{ receta.tiempoPreparacion }}</td>
+            <td class="text-center">{{ receta.dificultad }}</td>
+            <td>
+              <ul class="mb-0 ps-3">
+                <li *ngFor="let ri of receta.recetaIngredientes">
+                  {{ ri.cantidad }} {{ ri.unidad }}
+                  de {{ ri.ingrediente?.nombre || ('#' + ri.ingredienteId) }}
+                  <span class="text-muted">({{ ri.calorias }} calorías)</span>
+                </li>
+              </ul>
+            </td>
+            <td class="text-center">
+              <div class="btn-group btn-group-sm">
+                <a
+                  class="btn btn-outline-primary"
+                  [routerLink]="['/recetas', receta.recetaId, 'editar']"
+                >
+                  Editar
+                </a>
+                <button
+                  class="btn btn-outline-danger"
+                  (click)="eliminarReceta(receta.recetaId)"
+                >
+                  Eliminar
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <ng-template #vacio>
+    <div class="alert alert-info">No hay recetas.</div>
+  </ng-template>
+</div>

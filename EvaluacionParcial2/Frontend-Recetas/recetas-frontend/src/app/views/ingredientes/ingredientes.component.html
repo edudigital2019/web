@@ -1,0 +1,41 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Ingredientes</h2>
+    <a routerLink="/ingredientes/nuevo" class="btn btn-primary">Nuevo Ingrediente</a>
+  </div>
+  
+  <div *ngIf="cargando" class="alert alert-info">Cargando...</div>
+  <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+  <ng-container *ngIf="!cargando && !error">
+    <div *ngIf="ingredientes.length; else vacio" class="table-responsive">
+      <table class="table table-striped table-bordered align-middle">
+        <thead class="table-light">
+          <tr>
+            <th style="width:90px" class="text-center">ID</th>
+            <th>Nombre</th>
+            <th style="width:180px" class="text-center">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ing of ingredientes">
+            <td class="text-center">{{ ing.ingredienteId }}</td>
+            <td>{{ ing.nombre }}</td>
+            <td class="text-center">
+              <div class="btn-group btn-group-sm">
+                <a class="btn btn-outline-primary"
+                   [routerLink]="['/ingredientes', ing.ingredienteId, 'editar']">Editar</a>
+                <button class="btn btn-outline-danger"
+                        (click)="eliminar(ing.ingredienteId)">Eliminar</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ng-template #vacio>
+      <div class="alert alert-info mb-0">No hay ingredientes.</div>
+    </ng-template>
+  </ng-container>
+</div>
